@@ -36,6 +36,18 @@
     .person .name { font-weight: 600; font-size: 0.95rem; }
     .person .affil { color: var(--muted); font-size: 0.85rem; }
 
+    .agenda .card { padding: 0; overflow: hidden; margin-bottom: 1.5rem; }
+    .agenda table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+    .agenda col.time-col { width: 140px; }
+    .agenda col.event-col { width: 220px; }
+    .agenda col.details-col { width: auto; }
+    .agenda th { background: var(--accent); color: #fff; text-align: left; font-weight: 600; letter-spacing: 0.03em; }
+    .agenda th, .agenda td { padding: 0.85rem 1.1rem; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
+    .agenda th:first-child, .agenda td:first-child { width: 140px; white-space: nowrap; }
+    .agenda th:nth-child(2), .agenda td:nth-child(2) { width: 220px; }
+    .agenda tr:nth-child(even) td { background: #f1eee8; }
+    .agenda tr:last-child td { border-bottom: none; }
+
     footer { border-top: 1px solid var(--border); text-align: center; padding-top: 1rem; color: var(--muted); font-size: 0.9rem; }
   </style>
 </head>
@@ -81,34 +93,56 @@
     </section>
 
     <section class="agenda" id="agenda">
-      <h2>Day 1: Thursday, October 23</h2>
-  <table>
-    <tr><th>Time</th><th>Location</th><th>Details</th></tr>
-    <tr><td>8:00–9:00am</td><td>Bay Terrace</td><td>Breakfast continental</td></tr>
-    <tr><td>9:00–9:45am</td><td>Commodore A</td><td>Charles Yang, Welcome<br>Theresa Mayer, Keynote<br>Icebreaker discussion</td></tr>
-    <tr><td>9:45–10:45am</td><td>Commodore A</td><td>Research Partnership Talks<br>David Fenning and Caitlin Hogan<br>Aaike van Vugt and Jehad Ahmed</td></tr>
-    <tr><td>10:45–11:15am</td><td>Commodore A and Commodore B</td><td>Break</td></tr>
-    <tr><td>11:15–12:00pm</td><td>Brittania and Cambria</td><td>Research Partnership Talks<br>Boris Slautin and Roger Proksch<br>Wei Zhu and consortium members<br>Utkarsh Pratiush and Paolo Longo</td></tr>
-    <tr><td>12:00–1:00pm</td><td>Bay Terrace</td><td>Lunch</td></tr>
-    <tr><td>1:00–2:00pm</td><td>Brittania and Cambria</td><td>Breakout discussions + report-out</td></tr>
-    <tr><td>2:00–2:30pm</td><td>Brittania and Cambria</td><td>Breakout</td></tr>
-    <tr><td>2:30–3:30pm</td><td>Cambria</td><td>Round 1 of research partnerships breakout</td></tr>
-    <tr><td>2:30–3:30pm</td><td>Brittania</td><td>Roundtable discussion on philanthropy, investors, and AI labs on advancing autonomous science</td></tr>
-    <tr><td>3:30–4:00pm</td><td>Brittania and Cambria</td><td>Break</td></tr>
-    <tr><td>4:00–4:30pm</td><td>Commodore A</td><td>Closing session<br>Charles Yang, survey results and next steps</td></tr>
-    <tr><td>4:30–6:00pm</td><td></td><td>Reception</td></tr>
-  </table>
+        <h2>Day 1: Thursday, October 23</h2>
+        <div class="card">
+          <table>
+            <colgroup>
+              <col class="time-col" />
+              <col class="event-col" />
+              <col class="details-col" />
+            </colgroup>
+            <thead>
+              <tr><th scope="col">Time</th><th scope="col">Event</th><th scope="col">Details</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>8:00–9:00am</td><td>Breakfast</td><td>Continental buffet and networking</td></tr>
+              <tr><td>9:00–9:45am</td><td>Welcome &amp; Keynote</td><td>Charles Yang, Welcome<br>Theresa Mayer, Keynote<br>Icebreaker discussion</td></tr>
+              <tr><td>9:45–10:45am</td><td>Research Talks I</td><td>David Fenning and Caitlin Hogan<br>Aaike van Vugt and Jehad Ahmed</td></tr>
+              <tr><td>10:45–11:15am</td><td>Break</td><td>Coffee and hallway conversations</td></tr>
+              <tr><td>11:15–12:00pm</td><td>Research Talks II</td><td>Boris Slautin and Roger Proksch<br>Wei Zhu and consortium members<br>Utkarsh Pratiush and Paolo Longo</td></tr>
+              <tr><td>12:00–1:00pm</td><td>Lunch</td><td>Seasonal buffet lunch</td></tr>
+              <tr><td>1:00–2:00pm</td><td>Breakout Reports</td><td>Breakout discussions and report-outs</td></tr>
+              <tr><td>2:00–2:30pm</td><td>Breakout Prep</td><td>Teams regroup and plan next sessions</td></tr>
+              <tr><td>2:30–3:30pm</td><td>Research Breakouts</td><td>Round 1 of research partnerships breakout</td></tr>
+              <tr><td>2:30–3:30pm</td><td>Roundtable</td><td>Philanthropy, investors, and AI labs on advancing autonomous science</td></tr>
+              <tr><td>3:30–4:00pm</td><td>Break</td><td>Refreshments</td></tr>
+              <tr><td>4:00–4:30pm</td><td>Closing Session</td><td>Charles Yang, survey results and next steps</td></tr>
+              <tr><td>4:30–6:00pm</td><td>Reception</td><td>Networking reception</td></tr>
+            </tbody>
+          </table>
+        </div>
 
-  <h2>Day 2: Friday, October 24</h2>
-  <table>
-    <tr><th>Time</th><th>Location</th><th>Details</th></tr>
-    <tr><td>8:00–9:00am</td><td>Bay Terrace</td><td>Breakfast continental</td></tr>
-    <tr><td>9:00–9:30am</td><td>Commodore A</td><td>Welcome and Keynote<br>Charles Yang, Welcome and Reminders<br>Venkat Viswanathan, UMich</td></tr>
-    <tr><td>9:30–10:30am</td><td>Commodore A</td><td>Round 2 of research partnerships breakout</td></tr>
-    <tr><td>10:00–10:30am</td><td>Commodore A</td><td>Break</td></tr>
-    <tr><td>11:00–12:00pm</td><td>Brittania and Cambria</td><td>Submit research partnerships<br>Follow-ups and closing remarks</td></tr>
-    <tr><td>12:00–1:00pm</td><td>Bay Terrace</td><td>Lunch</td></tr>
-  </table>
+        <h2>Day 2: Friday, October 24</h2>
+        <div class="card">
+          <table>
+            <colgroup>
+              <col class="time-col" />
+              <col class="event-col" />
+              <col class="details-col" />
+            </colgroup>
+            <thead>
+              <tr><th scope="col">Time</th><th scope="col">Event</th><th scope="col">Details</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>8:00–9:00am</td><td>Breakfast</td><td>Continental buffet and networking</td></tr>
+              <tr><td>9:00–9:30am</td><td>Welcome &amp; Keynote</td><td>Charles Yang, Welcome and reminders<br>Venkat Viswanathan, U Mich</td></tr>
+              <tr><td>9:30–10:30am</td><td>Research Breakouts</td><td>Round 2 of research partnerships breakout</td></tr>
+              <tr><td>10:00–10:30am</td><td>Break</td><td>Coffee and hallway conversations</td></tr>
+              <tr><td>11:00–12:00pm</td><td>Final Presentations</td><td>Submit research partnerships<br>Follow-ups and closing remarks</td></tr>
+              <tr><td>12:00–1:00pm</td><td>Lunch</td><td>Farewell lunch</td></tr>
+            </tbody>
+          </table>
+        </div>
     </section>
 
     <!-- Participants -->
@@ -131,7 +165,7 @@
 
     <footer>
       <p>2025 Collaborations for Autonomous Science Instruments</p>
-      <p>With gracious support from <a href="https://sloan.org/" target="_blank">Sloan Foundation</a> and <a href="https://www.navigation.org/" target="_blank>the Navigation Fund</a></p>
+      <p>With gracious support from <a href="https://sloan.org/" target="_blank">Sloan Foundation</a> and <a href="https://www.navigation.org/" target="_blank">the Navigation Fund</a></p>
     </footer>
   </div>
 </body>
