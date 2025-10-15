@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 60" role="img" aria-labelledby="logo-title logo-desc">
+  <title id="logo-title">Renaissance Philanthropy</title>
+  <desc id="logo-desc">Stylized RP monogram with starburst accent</desc>
+  <defs>
+    <linearGradient id="rpGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6d8a72" />
+      <stop offset="100%" stop-color="#2f4c3a" />
+    </linearGradient>
+    <linearGradient id="sparkGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f0e8d9" />
+      <stop offset="100%" stop-color="#d7c6a9" />
+    </linearGradient>
+  </defs>
+  <rect width="180" height="60" rx="14" fill="url(#rpGradient)" />
+  <g fill="#f8f6f3" transform="translate(28,14)">
+    <path d="M0 0h20c11 0 18 6 18 15.5S31 31 20 31h-9v11H0V0Zm11 18h9c4.8 0 7.5-2.5 7.5-5.5S24.8 7 20 7h-9v11Z" />
+    <path d="m48 13 10.5-13H72l-13.3 16.4L72 42H59.6L48 26.2V42H38V0h10v13Z" />
+  </g>
+  <g transform="translate(130,12)">
+    <circle cx="20" cy="18" r="12" fill="rgba(248,246,243,0.22)" />
+    <path d="M20 0 22.8 9.2 32 12 22.8 14.8 20 24l-2.8-9.2L8 12l9.2-2.8L20 0Z" fill="url(#sparkGradient)" />
+  </g>
+</svg>
