@@ -91,9 +91,53 @@
       text-decoration: underline;
     }
 
+    .gallery-track {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(220px, 1fr);
+      gap: 1rem;
+      overflow-x: auto;
+      padding-bottom: 1rem;
+      scrollbar-width: thin;
+      scroll-snap-type: x proximity;
+    }
+
+    .gallery-track::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .gallery-track::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 999px;
+    }
+
+    .gallery-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      scroll-snap-align: start;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .gallery-item figcaption {
+      padding: 0.75rem 1rem 1rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
     @media (max-width: 720px) {
       .agenda .card { overflow-x: auto; }
       .agenda table { min-width: 520px; }
+      .gallery-track { grid-auto-columns: minmax(180px, 80%); }
     }
 
     footer { border-top: 1px solid var(--border); text-align: center; padding-top: 1rem; color: var(--muted); font-size: 0.9rem; }
@@ -148,6 +192,29 @@
       <div class="people">
         <div class="person"><img src="assets/venkat_viswanathan.jpg" alt="Venkat Viswanathan"/><div class="name">Venkat Viswanathan</div><div class="affil">University of Michigan</div></div>
         <div class="person"><img src="assets/theresa_mayer.jpg" alt="Theresa Mayer"/><div class="name">Theresa Mayer</div><div class="affil">Carnegie Mellon University</div></div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section" id="gallery">
+      <h2>Workshop Gallery</h2>
+      <div class="gallery-track" aria-label="Workshop photo gallery">
+        <figure class="gallery-item">
+          <img src="assets/charles_yang.jpg" alt="Charles Yang speaking at the workshop" />
+          <figcaption>Opening remarks from organizer Charles Yang.</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/venkat_viswanathan.jpg" alt="Venkat Viswanathan presenting" />
+          <figcaption>Keynote insights on autonomous science from Venkat Viswanathan.</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/theresa_mayer.jpg" alt="Theresa Mayer giving a talk" />
+          <figcaption>Theresa Mayer highlighting collaboration opportunities.</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/david_fenning.jpg" alt="David Fenning participating in a panel" />
+          <figcaption>Panel discussion with David Fenning on research partnerships.</figcaption>
+        </figure>
       </div>
     </section>
 
