@@ -107,6 +107,7 @@
     @media (max-width: 720px) {
       .agenda .card { overflow-x: auto; }
       .agenda table { min-width: 520px; }
+      .gallery-track { grid-auto-columns: minmax(180px, 80%); }
     }
 
     footer { border-top: 1px solid var(--border); text-align: center; padding-top: 1rem; color: var(--muted); font-size: 0.9rem; }
@@ -161,6 +162,29 @@
       <div class="people">
         <div class="person"><img src="assets/venkat_viswanathan.jpg" alt="Venkat Viswanathan"/><div class="name">Venkat Viswanathan</div><div class="affil">University of Michigan</div></div>
         <div class="person"><img src="assets/theresa_mayer.jpg" alt="Theresa Mayer"/><div class="name">Theresa Mayer</div><div class="affil">Carnegie Mellon University</div></div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section" id="gallery">
+      <h2>Workshop Gallery</h2>
+      <div class="gallery-track" aria-label="Workshop photo gallery">
+        <figure class="gallery-item">
+          <img src="assets/charles_yang.jpg" alt="Charles Yang speaking at the workshop" />
+          <figcaption>Opening remarks from organizer Charles Yang.</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/venkat_viswanathan.jpg" alt="Venkat Viswanathan presenting" />
+          <figcaption>Keynote insights on autonomous science from Venkat Viswanathan.</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/theresa_mayer.jpg" alt="Theresa Mayer giving a talk" />
+          <figcaption>Theresa Mayer highlighting collaboration opportunities.</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/david_fenning.jpg" alt="David Fenning participating in a panel" />
+          <figcaption>Panel discussion with David Fenning on research partnerships.</figcaption>
+        </figure>
       </div>
     </section>
 
