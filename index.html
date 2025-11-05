@@ -91,47 +91,17 @@
       text-decoration: underline;
     }
 
-    .gallery-track {
-      display: grid;
-      grid-auto-flow: column;
-      grid-auto-columns: minmax(220px, 1fr);
-      gap: 1rem;
-      overflow-x: auto;
-      padding-bottom: 1rem;
-      scrollbar-width: thin;
-      scroll-snap-type: x proximity;
+    .group-photo {
+      margin-top: 2rem;
+      text-align: center;
     }
 
-    .gallery-track::-webkit-scrollbar {
-      height: 8px;
-    }
-
-    .gallery-track::-webkit-scrollbar-thumb {
-      background: var(--border);
-      border-radius: 999px;
-    }
-
-    .gallery-item {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      scroll-snap-align: start;
-    }
-
-    .gallery-item img {
+    .group-photo img {
       width: 100%;
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
-    }
-
-    .gallery-item figcaption {
-      padding: 0.75rem 1rem 1rem;
-      font-size: 0.9rem;
-      color: var(--muted);
+      max-width: 780px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
     }
 
     @media (max-width: 720px) {
@@ -311,6 +281,14 @@
         <div class="person"><img src="assets/jie_xu.jpg" alt="Jie Xu"/><div class="name">Jie Xu</div><div class="affil">Argonne National Laboratory</div></div>
         <div class="person"><img src="assets/milad_abolhasani.jpg" alt="Milad Abolhasani"/><div class="name">Milad Abolhasani</div><div class="affil">North Carolina State University</div></div>
         <div class="person"><img src="assets/shijing_sun.jpg" alt="Shijing Sun"/><div class="name">Shijing Sun</div><div class="affil">University of Cambridge</div></div>
+      </div>
+    </section>
+
+    <!-- Group Photo -->
+    <section class="section" id="group-photo">
+      <h2>Workshop Group Photo</h2>
+      <div class="group-photo">
+        <img src="assets/workshop-group-photo.jpg" alt="Participants gathered for the workshop group photo" />
       </div>
     </section>
 
